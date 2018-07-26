@@ -418,7 +418,7 @@ namespace mongo {
         if ( ! shardingState.hasVersion( ns ) )
             return false;
 
-        return ShardedConnectionInfo::get(false) > 0;
+        return ShardedConnectionInfo::get(false) != nullptr;
     }
 
     class UnsetShardingCommand : public MongodShardCommand {

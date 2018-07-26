@@ -31,7 +31,7 @@ namespace mongo {
         Namespace(const StringData& ns) { *this = ns; }
         Namespace& operator=(const StringData& ns);
 
-        bool hasDollarSign() const { return strchr( buf , '$' ) > 0;  }
+        bool hasDollarSign() const { return strchr( buf , '$' ) != nullptr;  }
         void kill() { buf[0] = 0x7f; }
         bool operator==(const char *r) const { return strcmp(buf, r) == 0; }
         bool operator==(const Namespace& r) const { return strcmp(buf, r.buf) == 0; }

@@ -243,6 +243,6 @@ namespace mongo {
     inline Client::GodScope::~GodScope() { cc()._god = _prev; }
 
 
-    inline bool haveClient() { return currentClient.get() > 0; }
+    inline bool haveClient() { return currentClient.get() != nullptr; }
 
 };
