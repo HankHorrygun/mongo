@@ -359,8 +359,8 @@ if has_option( "cxx" ):
     env["CC"] = get_option( "cxx" )
     env["CXX"] = get_option( "cxx" )
 elif has_option("clang"):
-    env["CC"] = 'clang'
-    env["CXX"] = 'clang++'
+    env["CC"] = 'clang60'
+    env["CXX"] = 'clang++60'
 
 if has_option( "cc" ):
     env["CC"] = get_option( "cc" )
